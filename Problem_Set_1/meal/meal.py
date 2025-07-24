@@ -14,7 +14,7 @@ def main():
 
 def convert(input_time):
 #input time has been passed as an argument and will be seperated into hours and minutes variables and then converted to float
-    hours,minutes = input_time.sptil(":")
+    hours,minutes = input_time.split(":")
 
     hours = hours.float()
     minutes = int(minutes.float())/60 
