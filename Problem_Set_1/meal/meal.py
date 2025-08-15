@@ -1,26 +1,22 @@
 def main(): 
-#input_time variable holds the user input and supports 12-hour time formats, it also takes into consideration case-insensititvity.
-    input_time = input("What's the time? ").split(".a.m",".p.m").lower()
-    
-#conditional statements will check if the user input times that have been convertedd in def convert(), falls within the specified time frames 
-    if input_time >= 7.0 or input_time <= 8.0: 
-        return "Breakfast"
-    
-    if input_time >= 12.0 or input_time <= 13.0:
-            return "Lunch"
-   
-    if input_time >= 18.0 or input_time <= 19.0:
-            return "Supper"
+    input_time = input("What is the time ? ").lower().strip("a.m").strip("p.m")
+
+    time = convert(input_time)
+
+    if 7 <= time <= 8:
+        print ("breakfast time")
+    elif 12 <= time <=13: 
+        print("lunch time")
+    elif 18<= time <= 19:
+        print("dinner time")
 
 def convert(input_time):
-#input time has been passed as an argument and will be seperated into hours and minutes variables and then converted to float
-    hours,minutes = input_time.split(":")
-
-    hours = hours.float()
-    minutes = int(minutes.float())/60 
-
-    time =f"{hours} + {minutes}"
-    return time
-
+     #split the user input at the ":" and place the values into two different variables. 
+     hours, minutes = input_time.split(":")
+    #convert hours and minutes to float
+     time = float(hours) + float(minutes)/60
+     return time
 if __name__ == "__main__":
-    main()
+    main() 
+
+    
