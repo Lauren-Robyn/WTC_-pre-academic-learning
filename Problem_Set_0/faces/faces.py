@@ -1,2 +1,5 @@
-faces = input ("are you happy or sad? ")
-print(faces.replace(":(","🙁").replace(":)","🙂"))
+def main ():
+    faces = input ("are you happy or sad? ")
+    print(faces.replace(":(","🙁").replace(":)","🙂"))
+
+main()
