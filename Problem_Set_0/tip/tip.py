@@ -1,6 +1,8 @@
 
 def main():
+    #the user input in dollars will be passed as an argument to dollars_to_float
     dollars = dollars_to_float(input("How much was the meal? "))
+    #this user input will be passed to percent_to_float
     percent = percent_to_float(input("What percentage would you like to tip? "))
     tip = dollars * percent
     print(f"Leave ${tip:.2f}")
