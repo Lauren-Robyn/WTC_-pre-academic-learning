@@ -1,7 +1,8 @@
-answer = input("What is the answer to the Great Question of life, the Universe, and Everything? ").strip(" ").lower()
+def main():
+    answer = input("What is the answer to the Great Question of life, the Universe, and Everything? ").replace("-"," ").strip(" ").lower()
 
-match answer:
-    case "42" | "Forty-Two" | "forty-two" | "Forty-two"| "forty-Two" | "Forty Two"| "Forty two" | "forty two" | "forty Two" :
+    if answer == "42" or answer == "Forty two":
         print("Yes")
-    case _:
+    else:
         print("No")
+main()
